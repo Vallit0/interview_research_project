@@ -1,0 +1,24 @@
+<odoo>
+    <template id="report_research_project">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <div class="page">
+                    <h2>Project: <t t-esc="doc.name"/></h2>
+                    <p><strong>Code:</strong> <t t-esc="doc.code"/></p>
+                    <p><strong>Start Date:</strong> <t t-esc="doc.start_date"/></p>
+                    <p><strong>End Date:</strong> <t t-esc="doc.end_date"/></p>
+                    <p><strong>Budget:</strong> $<t t-esc="doc.budget"/></p>
+                    <p><strong>Description:</strong></p>
+                    <p><t t-esc="doc.description"/></p>
+                    <h3>Investigators:</h3>
+                    <ul>
+                        <t t-foreach="doc.investigator_ids" t-as="investigator">
+                            <li><t t-esc="investigator.name"/></li>
+                        </t>
+                    </ul>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
+

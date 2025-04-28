@@ -1,0 +1,12 @@
+<odoo>
+    <report 
+        id="action_report_research_project"
+        model="research.project"
+        string="Research Project Report"
+        report_type="qweb-pdf"
+        name="research_project.report_research_project"
+        file="research_project.report_research_project"
+        print_report_name="'Research Project - %s' % (object.name)"
+    />
+</odoo>
+

@@ -1,0 +1,68 @@
+<odoo>
+    <record id="view_research_project_form" model="ir.ui.view">
+        <field name="name">research.project.form</field>
+        <field name="model">research.project</field>
+        <field name="type">form</field> <!-- Obligatorio -->
+        <field name="arch" type="xml">
+            <form string="Research Project">
+                <sheet>
+                    <group>
+                        <field name="state" widget="statusbar" options="{'clickable': True}" statusbar_visible="new,in_progress,review,completed,cancelled"/>
+                    </group>
+
+                    <group>
+                        <field name="name"/>
+                        <field name="code" readonly="1"/>
+                        <field name="description"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                        <field name="budget"/>
+                        <field name="priority"/>
+                        <field name="leader_id"/>
+                        <field name="investigator_ids" widget="many2many_tags"/>
+                        <field name="duration_days" readonly="1"/>
+                    </group>
+
+                    <div class="oe_button_box" name="button_box">
+                        <button name="action_in_progress" type="object" string="Start" class="oe_stat_button" icon="fa-play"/>
+                        <button name="action_review" type="object" string="Send to Review" class="oe_stat_button" icon="fa-eye"/>
+                        <button name="action_completed" type="object" string="Mark as Completed" class="oe_stat_button" icon="fa-check"/>
+                        <button name="action_cancelled" type="object" string="Cancel" class="oe_stat_button btn-danger" icon="fa-times"/>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_research_project_list" model="ir.ui.view">
+        <field name="name">research.project.list</field>
+        <field name="model">research.project</field>
+        <field name="type">list</field> <!-- Obligatorio -->
+        <field name="arch" type="xml">
+            <list default_order="state desc">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+                <field name="budget"/>
+                <field name="state"/>
+                <field name="priority"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_research_project" model="ir.actions.act_window">
+        <field name="name">Proyectos de Investigación</field>
+        <field name="res_model">research.project</field>
+        <field name="view_mode">list,form</field> <!-- CAMBIADO a list,form -->
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                ¡Crea tu primer proyecto de investigación!
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="menu_research_root" name="Investigación" sequence="10"/>
+    <menuitem id="menu_research_project" name="Proyectos" parent="menu_research_root" action="action_research_project" sequence="20"/>
+</odoo>
+
