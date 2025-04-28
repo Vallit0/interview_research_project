@@ -1,41 +1,42 @@
-# Desarrollo de Módulos de Investigación 
-Previo a la integración de módulos de Odoo, es necesario instalar las dependencias. En este caso, se instalará Odoo 18 con hard-binding en contenedores de docker para no afectar 
-el sistema operativo. 
-```docker
-version: '3.1'
-
-services:
-  db:
-    image: postgres:15
-    container_name: odoo18-db
-    environment:
-      POSTGRES_DB: odoo
-      POSTGRES_USER: odoo
-      POSTGRES_PASSWORD: odoo
-    ports:
-      - "5432:5432"
-    restart: always
-    volumes:
-      - odoo18_db_data:/var/lib/postgresql/data
-
-  odoo:
-    image: odoo:18.0
-    container_name: odoo18
-    depends_on:
-      - db
-    ports:
-      - "8069:8069"
-    restart: always
-    volumes:
-      - ./custom_addons:/mnt/extra-addons
-    environment:
-      - HOST=db
-      - USER=odoo
-      - PASSWORD=odoo
-
-volumes:
-  odoo18_db_data:
-
+# Desarrollo de Módulos de Investigación
+## Documentación Técnica
+Previo a la integración de módulos de Odoo, es necesario instalar las dependencias. En este caso, se instalará Odoo 18 en Ubuntu.
+```bash
+git clone https://www.github.com/odoo/odoo --branch 18.0 --single-branch .
 ```
 
+![image](https://github.com/user-attachments/assets/b33f75bc-9e0e-4bef-b549-d0e70506b26b)
 
+![image](https://github.com/user-attachments/assets/5a69a118-37b6-4f08-a849-e4a8104e943f)
+
+
+![image](https://github.com/user-attachments/assets/de558bcf-2b23-43c8-bf92-3b217af0d5e2)
+
+![image](https://github.com/user-attachments/assets/35395abb-3258-4d93-a03f-e28db35fb1fc)
+
+![image](https://github.com/user-attachments/assets/2820945b-7dc7-468c-9144-1768efac6188)
+
+```bash
+custom_addons
+└── research_project
+    ├── data
+    │   └── project_sequence.xml
+    ├── __init__.py
+    ├── __manifest__.py
+    ├── models
+    │   ├── __init__.py
+    │   └── research_project.py
+    ├── __pycache__
+    │   └── __init__.cpython-310.pyc
+    ├── README.md
+    ├── report
+    │   ├── research_project_report.xml
+    │   └── research_project_templates.xml
+    ├── security
+    │   ├── ir.model.access.csv
+    │   └── security.xml
+    └── views
+        └── research_project_views.xml
+
+7 directories, 12 files
+```
