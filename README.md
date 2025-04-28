@@ -1,5 +1,5 @@
-# Desarrollo de Módulos de Investigación
-## Documentación de Usuario (Demo)
+# Desarrollo de Módulos de Investigación 🚀
+## Documentación de Usuario (Demo) 🖱️
 
 #### Ingreso de Módulo en Búsqueda 
 ![image](https://github.com/user-attachments/assets/2820945b-7dc7-468c-9144-1768efac6188)
@@ -105,6 +105,7 @@ class ResearchProject(models.Model):
     _description = 'Research Project'
     _inherit = ['mail.thread', 'mail.activity.mixin']
 ```
+#### Descripcion
 Define el modelo research.project para gestionar proyectos de investigación.
 Se heredan funcionalidades de mail.thread (seguimiento de cambios) y mail.activity.mixin (actividades).
 
@@ -132,6 +133,12 @@ investigator_ids = fields.Many2many('res.partner', string='Investigators')
 leader_id = fields.Many2one('res.partner', string='Project Leader')
 duration_days = fields.Integer(string='Duration (days)', compute='_compute_duration')
 ```
+#### Descripcion
+Define todos los campos requeridos por el ejercicio, incluyendo:
+1. Campos básicos (Char, Text, Date, Float).
+2. Relaciones (Many2many, Many2one).
+3. Campo computado duration_days.
+   
 ### Método Computado Solicitado 
 ```python
 @api.depends('start_date', 'end_date')
@@ -142,7 +149,8 @@ def _compute_duration(self):
         else:
             record.duration_days = 0
 ```
-
+#### Descripcion
+Calcula automáticamente el número de días entre la fecha de inicio y la fecha de finalización.
 ### Sobreescritura del Método 
 ```python
 @api.model
@@ -151,6 +159,9 @@ def create(self, vals):
         vals['code'] = self.env['ir.sequence'].next_by_code('research.project') or 'New'
     return super().create(vals)
 ```
+#### Descripcion
+Genera automáticamente un código único para el proyecto al momento de su creación, utilizando una secuencia.
+
 ### Constrains de Fechas 
 ```python
 @api.constrains('start_date', 'end_date')
@@ -159,6 +170,10 @@ def _check_dates(self):
         if record.start_date and record.end_date and record.start_date > record.end_date:
             raise ValidationError('The start date cannot be after the end date.')
 ```
+#### Descripcion
+Evita que la fecha de inicio sea posterior a la fecha de finalización mediante una restricción.
+![image](https://github.com/user-attachments/assets/ac48661f-8c4d-43c1-af22-7d460dfac37e)
+
 ### Validacion del Presupuesto 
 ```python
 @api.onchange('budget')
@@ -166,6 +181,10 @@ def _onchange_budget(self):
     if self.budget and self.budget < 0:
         raise ValidationError('Budget must be positive.')
 ```
+#### Descripcion
+Valida que no sea 0
+
+
 
 ### Métodos para cambio de estado 
 ```python
