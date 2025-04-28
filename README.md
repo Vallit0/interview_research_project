@@ -1,5 +1,13 @@
 # Desarrollo de Módulos de Investigación
-## Documentación Técnica
+## Documentación de Usuario 
+![image](https://github.com/user-attachments/assets/5b4ba6bf-44b4-4bae-a7e6-472abfed24e9)
+![image](https://github.com/user-attachments/assets/f6b73671-36cb-41e6-98bd-e3a9f37d63c0)
+
+![image](https://github.com/user-attachments/assets/2820945b-7dc7-468c-9144-1768efac6188)
+
+
+
+## Documentacion Técnica 
 Previo a la integración de módulos de Odoo, es necesario instalar las dependencias. En este caso, se instalará Odoo 18 en Ubuntu.
 ```bash
 git clone https://www.github.com/odoo/odoo --branch 18.0 --single-branch .
@@ -14,7 +22,6 @@ git clone https://www.github.com/odoo/odoo --branch 18.0 --single-branch .
 
 ![image](https://github.com/user-attachments/assets/35395abb-3258-4d93-a03f-e28db35fb1fc)
 
-![image](https://github.com/user-attachments/assets/2820945b-7dc7-468c-9144-1768efac6188)
 
 ```bash
 custom_addons
@@ -40,3 +47,5 @@ custom_addons
 
 7 directories, 12 files
 ```
+
+
