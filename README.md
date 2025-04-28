@@ -1,13 +1,13 @@
 # Desarrollo de Módulos de Investigación
 ## Documentación de Usuario (Demo)
 
-#### Ingreso de Módulo en Búsqueda
+#### Ingreso de Módulo en Búsqueda 
 ![image](https://github.com/user-attachments/assets/2820945b-7dc7-468c-9144-1768efac6188)
 
 ### Inicialización de Módulo
 ![image](https://github.com/user-attachments/assets/5b4ba6bf-44b4-4bae-a7e6-472abfed24e9)
 
-###
+### Ingreso de Proyecto de Investigacion con Campos Solicitados
 ![image](https://github.com/user-attachments/assets/f6b73671-36cb-41e6-98bd-e3a9f37d63c0)
 
 Dentro de la presente vista, es notorio que se pueden agregar los siguientes campos: 
@@ -24,13 +24,22 @@ Dentro de la presente vista, es notorio que se pueden agregar los siguientes cam
 - leader_id: Many2one - Investigador principal (res.partner)
 - Al menos un campo computado de su elección
 
-  
+##### Ingreso de Fecha Establecida
 ![image](https://github.com/user-attachments/assets/a1d2b032-57c8-4b67-95c5-2c16ee423b0c)
+
+##### Campos ManyToOne
 ![image](https://github.com/user-attachments/assets/a15891ff-1c50-4065-ad4e-1d263fc929f6)
+
+#### Droplist y módulos bajo data demo de Odoo
 ![image](https://github.com/user-attachments/assets/0f3694c6-3f23-4fad-9386-5204168294d8)
+
+#### Dinamismo de Formularios
 ![image](https://github.com/user-attachments/assets/a4517e6c-e8f5-4375-83bd-d88ee92c38dd)
+
+#### Vista de Verificación
 ![image](https://github.com/user-attachments/assets/8df8df06-77b7-4575-9c8e-370dbff8446d)
 
+#### Vista de Árbol de Proyectos 
 ![image](https://github.com/user-attachments/assets/58379535-bbea-421b-a618-14f538ed1182)
 
 ## Documentacion Técnica 
@@ -73,5 +82,7 @@ custom_addons
 
 7 directories, 12 files
 ```
+
+
 
 
