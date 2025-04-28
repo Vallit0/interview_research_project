@@ -52,12 +52,13 @@ git clone https://www.github.com/odoo/odoo --branch 18.0 --single-branch .
 
 ![image](https://github.com/user-attachments/assets/5a69a118-37b6-4f08-a849-e4a8104e943f)
 
-
+Es necesario agregar a Odoo.conf los módulos que se activarán.
 ![image](https://github.com/user-attachments/assets/de558bcf-2b23-43c8-bf92-3b217af0d5e2)
 
+Además de activar el modo "Developer"
 ![image](https://github.com/user-attachments/assets/35395abb-3258-4d93-a03f-e28db35fb1fc)
 
-
+### Organización de Módulos
 ```bash
 custom_addons
 └── research_project
@@ -81,6 +82,11 @@ custom_addons
         └── research_project_views.xml
 
 7 directories, 12 files
+```
+
+En primera instancia, se le debe indicar al módulo que este pueda ser importado por python en '__init__.py' 
+```python
+from . import models
 ```
 
 
