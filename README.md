@@ -1,9 +1,9 @@
 # Desarrollo de Módulos de Investigación
 ## Documentación de Usuario 
-![image](https://github.com/user-attachments/assets/5b4ba6bf-44b4-4bae-a7e6-472abfed24e9)
-![image](https://github.com/user-attachments/assets/f6b73671-36cb-41e6-98bd-e3a9f37d63c0)
 
 ![image](https://github.com/user-attachments/assets/2820945b-7dc7-468c-9144-1768efac6188)
+![image](https://github.com/user-attachments/assets/5b4ba6bf-44b4-4bae-a7e6-472abfed24e9)
+![image](https://github.com/user-attachments/assets/f6b73671-36cb-41e6-98bd-e3a9f37d63c0)
 
 
 
