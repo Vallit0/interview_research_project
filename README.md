@@ -1,8 +1,13 @@
 # Desarrollo de Módulos de Investigación
-## Documentación de Usuario 
+## Documentación de Usuario (Demo)
 
+#### Ingreso de Módulo en Búsqueda
 ![image](https://github.com/user-attachments/assets/2820945b-7dc7-468c-9144-1768efac6188)
+
+### Inicialización de Módulo
 ![image](https://github.com/user-attachments/assets/5b4ba6bf-44b4-4bae-a7e6-472abfed24e9)
+
+###
 ![image](https://github.com/user-attachments/assets/f6b73671-36cb-41e6-98bd-e3a9f37d63c0)
 
 Dentro de la presente vista, es notorio que se pueden agregar los siguientes campos: 
