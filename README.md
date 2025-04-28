@@ -1,7 +1,7 @@
 # Desarrollo de Módulos de Investigación 
 Previo a la integración de módulos de Odoo, es necesario instalar las dependencias. En este caso, se instalará Odoo 18 con hard-binding en contenedores de docker para no afectar 
 el sistema operativo. 
-'''docker
+```docker
 version: '3.1'
 
 services:
@@ -36,5 +36,6 @@ services:
 volumes:
   odoo18_db_data:
 
-''' 
+```
+
 
